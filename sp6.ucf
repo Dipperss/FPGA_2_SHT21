@@ -1,0 +1,29 @@
+##########################################################
+#时钟和复位接口
+NET "ext_clk_25m" LOC = P23;
+NET "ext_clk_25m" IOSTANDARD = LVCMOS33;
+NET "ext_rst_n" LOC = P24;
+NET "ext_rst_n" IOSTANDARD = LVCMOS33;
+
+##########################################################
+#4位数码管接口
+NET "dtube_cs_n[0]"		LOC=P132   | IOSTANDARD = LVCMOS33;
+NET "dtube_cs_n[1]"		LOC=P141   | IOSTANDARD = LVCMOS33;
+NET "dtube_cs_n[2]"		LOC=P142   | IOSTANDARD = LVCMOS33;
+NET "dtube_cs_n[3]"		LOC=P2   | IOSTANDARD = LVCMOS33;
+
+NET "dtube_data[0]"		LOC=P1   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[1]"		LOC=P140   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[2]"		LOC=P134   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[3]"		LOC=P138   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[4]"		LOC=P137   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[5]"		LOC=P143   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[6]"		LOC=P133   | IOSTANDARD = LVCMOS33;
+NET "dtube_data[7]"		LOC=P139   | IOSTANDARD = LVCMOS33;
+
+##########################################################
+
+NET "rtc_iic_sck"		LOC=P66   | IOSTANDARD = LVCMOS33;
+NET "rtc_iic_sda"		LOC=P67   | IOSTANDARD = LVCMOS33;
+NET "uart_tx"		LOC=P8   | IOSTANDARD = LVCMOS33;
+

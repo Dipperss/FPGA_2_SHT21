@@ -27,3 +27,4 @@ NET "rtc_iic_sck"		LOC=P66   | IOSTANDARD = LVCMOS33;
 NET "rtc_iic_sda"		LOC=P67   | IOSTANDARD = LVCMOS33;
 NET "uart_tx"		LOC=P8   | IOSTANDARD = LVCMOS33;
 
+

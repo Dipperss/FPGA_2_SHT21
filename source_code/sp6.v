@@ -38,6 +38,7 @@ parameter	DEVICE_WRADD	= 8'h80,	//write device addr
 			DEVICE_SDCMT  = 8'he3,
 			DEVICE_SDCMH  = 8'he5;
 
+
 wire timer_1s_en;
 wire[7:0] DEVICE_SDCMD;
 //时钟模块，每隔1s发出一个脉冲信号，启动iic读取数据，以及温湿度调度模块
@@ -51,18 +52,17 @@ iic_1s_counter			uut_iic_1s_counter(
 );
 
 
-
-
 wire[7:0] iic_rdms;
 wire[7:0] iic_rdls;
 //iic通信模块用于测量温度
 iic_controller 			uut_iic_tem_controller (
 							.clk(clk_100m), 
 							.rst_n(sys_rst_n), 
-							.en(timer_1s_en),
+							.sclDiv(10'd512),
 							.DEVICE_WRADD(DEVICE_WRADD), 
 							.DEVICE_RDADD(DEVICE_RDADD), 
 							.DEVICE_SDCMD(DEVICE_SDCMD), 
+							.en(timer_1s_en),
 							.iic_rdms(iic_rdms), 
 							.iic_rdls(iic_rdls), 
 							.iic_ack(iic_ack), 
